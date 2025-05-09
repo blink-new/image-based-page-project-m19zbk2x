@@ -1,0 +1,83 @@
+@keyframes twinkle {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.5);
+  }
+}
+
+.bg-stars {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Add subtle glow effect to the title */
+h1 {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Add subtle glow effect to the blue accent */
+.text-[#3B82F6] {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Add subtle animation to the card */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+main > div:last-child > div:nth-child(2) {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Add hover effects using relative positioning */
+button.relative:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scaleX(0.7);
+  transition: transform 0.3s ease;
+}
+
+button.relative:hover::after {
+  transform: scaleX(1);
+}
+
+/* Add subtle movement to decorative elements */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+}
+
+.blur-lg, .blur-md, .blur-xl {
+  animation: pulse 8s ease-in-out infinite;
+}
